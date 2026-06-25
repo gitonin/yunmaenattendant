@@ -519,13 +519,16 @@
   });
 
   /* ════════════════════════════════════
-     CAROUSEL DOTS
+     CAROUSEL DOTS + RESET ON SCROLL OUT
   ════════════════════════════════════ */
-  document.querySelectorAll('.card-carousel').forEach(function (carousel) {
+  var carousels = document.querySelectorAll('.card-carousel');
+
+  carousels.forEach(function (carousel) {
     var track = carousel.querySelector('.carousel-track');
     var dots  = carousel.querySelectorAll('.dot');
     if (!track || !dots.length) return;
 
+    /* Sync dots while swiping */
     track.addEventListener('scroll', function () {
       var idx = Math.round(track.scrollLeft / (track.clientWidth || 1));
       dots.forEach(function (dot, i) {
@@ -533,6 +536,28 @@
       });
     }, { passive: true });
   });
+
+  /* Reset to first slide when carousel leaves the viewport */
+  if ('IntersectionObserver' in window) {
+    var resetObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) {
+          var track = entry.target.querySelector('.carousel-track');
+          var dots  = entry.target.querySelectorAll('.dot');
+          if (track) {
+            track.scrollLeft = 0;
+            dots.forEach(function (dot, i) {
+              dot.classList.toggle('is-active', i === 0);
+            });
+          }
+        }
+      });
+    }, { threshold: 0 });
+
+    carousels.forEach(function (carousel) {
+      resetObserver.observe(carousel);
+    });
+  }
 
   /* ════════════════════════════════════
      SMOOTH SCROLL

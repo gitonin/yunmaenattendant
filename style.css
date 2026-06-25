@@ -315,7 +315,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .hero-content-col {
-  padding: calc(var(--header-h) + 4px) 24px 40px;
+  padding: var(--header-h) 24px 40px;
 }
 
 .hero-content {
@@ -353,7 +353,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero-content-col {
     flex: 1;
     min-width: 0;
-    padding: calc(var(--header-h) + 8px) 56px 72px 60px;
+    padding: var(--header-h) 56px 72px 60px;
   }
 
   .hero-visual {
