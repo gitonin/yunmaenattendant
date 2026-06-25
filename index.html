@@ -3,8 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Yunma — Cafés de spécialité sourcés à Yunnan, Chine. Slow Coffee. Slow Life." />
-  <title>Yunma — Slow Coffee. Slow Life.</title>
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#F3EFE7" />
+
+  <title>Yunma | Cafés de Spécialité du Yunnan — Slow Coffee, Slow Life</title>
+  <meta name="description" content="Yunma propose des cafés de spécialité sourcés directement au Yunnan (Chine), torréfiés à Paris avec soin. Arabica d'altitude, sourcing direct, livraison en France. Slow Coffee. Slow Life." />
+  <link rel="canonical" href="https://gitonin.github.io/yunmaenattendant/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Yunma" />
+  <meta property="og:url" content="https://gitonin.github.io/yunmaenattendant/" />
+  <meta property="og:title" content="Yunma | Cafés de Spécialité du Yunnan" />
+  <meta property="og:description" content="Cafés de spécialité sourcés directement au Yunnan, Chine. Torréfaction artisanale à Paris. Sourcing direct, terroirs d'altitude." />
+  <meta property="og:image" content="https://gitonin.github.io/yunmaenattendant/assets/hero-cherry.jpg" />
+  <meta property="og:image:alt" content="Cerises de café du Yunnan — Yunma" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yunma | Cafés de Spécialité du Yunnan" />
+  <meta name="twitter:description" content="Cafés de spécialité sourcés directement au Yunnan, Chine. Torréfaction artisanale à Paris." />
+  <meta name="twitter:image" content="https://gitonin.github.io/yunmaenattendant/assets/hero-cherry.jpg" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Yunma",
+    "alternateName": "云马",
+    "url": "https://gitonin.github.io/yunmaenattendant/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://gitonin.github.io/yunmaenattendant/assets/logo.png"
+    },
+    "image": "https://gitonin.github.io/yunmaenattendant/assets/hero-cherry.jpg",
+    "description": "Cafés de spécialité sourcés directement au Yunnan, Chine. Torréfaction artisanale à Paris. Slow Coffee. Slow Life.",
+    "email": "hello@yunma.coffee",
+    "foundingLocation": { "@type": "Place", "name": "Paris, France" },
+    "areaServed": "FR",
+    "sameAs": ["https://www.instagram.com/yunma.coffee"]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300&display=swap" rel="stylesheet" />
@@ -102,7 +144,7 @@
         </div>
         <div class="hero-visual">
           <div class="hero-img-wrap">
-            <img src="assets/hero-cherry.jpg" alt="Yunma — cerises de café du Yunnan" class="hero-img" />
+            <img src="assets/hero-cherry.jpg" alt="Yunma — cerises de café du Yunnan" class="hero-img" loading="eager" fetchpriority="high" />
           </div>
         </div>
       </div>
@@ -144,6 +186,18 @@
 
         <div class="cards-grid">
           <article class="card">
+            <div class="card-carousel">
+              <div class="carousel-track" role="region" aria-label="Photos — Arabica de montagne">
+                <img src="assets/k1-1.jpg" alt="Arabica de montagne Yunnan Baoshan — Yunma" loading="lazy" />
+                <img src="assets/k1-2.jpg" alt="Arabica de montagne Yunnan Baoshan — plantation en altitude" loading="lazy" />
+                <img src="assets/k1-3.jpg" alt="Arabica de montagne Yunnan Baoshan — grains de café" loading="lazy" />
+              </div>
+              <div class="carousel-dots" aria-hidden="true">
+                <span class="dot is-active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
             <div class="card-body">
               <span class="card-origin" data-i18n="cafes.k1.origin">Yunnan — Baoshan</span>
               <h3 class="card-name" data-i18n="cafes.k1.name">Arabica de montagne</h3>
@@ -156,6 +210,18 @@
             </div>
           </article>
           <article class="card">
+            <div class="card-carousel">
+              <div class="carousel-track" role="region" aria-label="Photos — Natural process">
+                <img src="assets/k2-1.jpg" alt="Natural process Yunnan Pu'er — Yunma" loading="lazy" />
+                <img src="assets/k2-2.jpg" alt="Natural process Yunnan Pu'er — cerises de café" loading="lazy" />
+                <img src="assets/k2-3.jpg" alt="Natural process Yunnan Pu'er — grains séchés" loading="lazy" />
+              </div>
+              <div class="carousel-dots" aria-hidden="true">
+                <span class="dot is-active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
             <div class="card-body">
               <span class="card-origin" data-i18n="cafes.k2.origin">Yunnan — Pu'er</span>
               <h3 class="card-name" data-i18n="cafes.k2.name">Natural process</h3>
@@ -168,6 +234,18 @@
             </div>
           </article>
           <article class="card">
+            <div class="card-carousel">
+              <div class="carousel-track" role="region" aria-label="Photos — Honey process">
+                <img src="assets/k3-1.jpg" alt="Honey process Yunnan Dehong — Yunma" loading="lazy" />
+                <img src="assets/k3-2.jpg" alt="Honey process Yunnan Dehong — terroir d'altitude" loading="lazy" />
+                <img src="assets/k3-3.jpg" alt="Honey process Yunnan Dehong — grains de café" loading="lazy" />
+              </div>
+              <div class="carousel-dots" aria-hidden="true">
+                <span class="dot is-active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
             <div class="card-body">
               <span class="card-origin" data-i18n="cafes.k3.origin">Yunnan — Dehong</span>
               <h3 class="card-name" data-i18n="cafes.k3.name">Honey process</h3>
@@ -260,6 +338,11 @@
 
       </div>
     </section>
+
+    <!-- Mobile visual — after Cafés (hidden on desktop) -->
+    <div class="visual-mobile" aria-hidden="true">
+      <img src="assets/visual-cafes.jpg" alt="Yunma — café de spécialité du Yunnan" loading="lazy" />
+    </div>
 
     <!-- ══════════════════════════
          03 — HISTOIRE
@@ -425,6 +508,11 @@
 
       </div>
     </section>
+
+    <!-- Mobile visual — after Professionnels (hidden on desktop) -->
+    <div class="visual-mobile" aria-hidden="true">
+      <img src="assets/visual-pro.jpg" alt="Yunma — café de spécialité, offre professionnelle" loading="lazy" />
+    </div>
 
     <!-- ══════════════════════════
          05 — CONTACT

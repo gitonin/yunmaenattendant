@@ -519,6 +519,22 @@
   });
 
   /* ════════════════════════════════════
+     CAROUSEL DOTS
+  ════════════════════════════════════ */
+  document.querySelectorAll('.card-carousel').forEach(function (carousel) {
+    var track = carousel.querySelector('.carousel-track');
+    var dots  = carousel.querySelectorAll('.dot');
+    if (!track || !dots.length) return;
+
+    track.addEventListener('scroll', function () {
+      var idx = Math.round(track.scrollLeft / (track.clientWidth || 1));
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle('is-active', i === idx);
+      });
+    }, { passive: true });
+  });
+
+  /* ════════════════════════════════════
      SMOOTH SCROLL
   ════════════════════════════════════ */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
