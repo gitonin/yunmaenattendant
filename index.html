@@ -15,15 +15,37 @@
   <!-- ══ HEADER ══ -->
   <header id="site-header">
     <div class="header-inner">
+
+      <!-- Lang switcher — left -->
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn" id="langBtn" aria-label="Changer de langue" aria-haspopup="listbox" aria-expanded="false">
+          <span id="langCurrent">FR</span>
+          <svg width="8" height="5" viewBox="0 0 8 5" fill="none">
+            <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="lang-dropdown" id="langDropdown" role="listbox" aria-hidden="true">
+          <button class="lang-opt is-active" data-lang="fr" role="option">Français</button>
+          <button class="lang-opt" data-lang="en" role="option">English</button>
+          <button class="lang-opt" data-lang="de" role="option">Deutsch</button>
+          <button class="lang-opt" data-lang="it" role="option">Italiano</button>
+          <button class="lang-opt" data-lang="es" role="option">Español</button>
+        </div>
+      </div>
+
+      <!-- Logo — center -->
       <a href="#accueil" class="logo-link" aria-label="Yunma — retour à l'accueil">
         <img src="assets/logo.png" alt="Yunma" class="logo-img" />
       </a>
+
+      <!-- Burger — right -->
       <button class="burger-btn" id="burgerBtn"
         aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navPanel">
         <span class="burger-line"></span>
         <span class="burger-line"></span>
         <span class="burger-line"></span>
       </button>
+
     </div>
   </header>
 
@@ -40,12 +62,12 @@
       </button>
     </div>
     <ul class="nav-list" role="list">
-      <li><a href="#accueil" class="nav-link">Accueil</a></li>
-      <li><a href="#cafes" class="nav-link">Cafés</a></li>
-      <li><a href="#histoire" class="nav-link">Histoire</a></li>
-      <li><a href="#professionnels" class="nav-link">Professionnels</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-      <li><a href="#legal" class="nav-link">Légal</a></li>
+      <li><a href="#accueil" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+      <li><a href="#cafes" class="nav-link" data-i18n="nav.coffees">Cafés</a></li>
+      <li><a href="#histoire" class="nav-link" data-i18n="nav.story">Histoire</a></li>
+      <li><a href="#professionnels" class="nav-link" data-i18n="nav.pro">Professionnels</a></li>
+      <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="#legal" class="nav-link" data-i18n="nav.legal">Légal</a></li>
     </ul>
     <div class="nav-bottom">
       <a href="https://www.instagram.com/yunma.coffee" target="_blank" rel="noopener noreferrer" class="nav-instagram">
@@ -68,20 +90,19 @@
       <div class="hero-main">
         <div class="hero-content-col">
           <div class="hero-content">
-            <span class="label">Yunnan, Chine — 云南</span>
-            <h1 class="hero-title">Slow Coffee.<br>Slow Life.</h1>
+            <span class="label" data-i18n="hero.label">Yunnan, Chine — 云南</span>
+            <h1 class="hero-title" data-i18n-html="hero.title">Slow Coffee.<br>Slow Life.</h1>
             <p class="hero-tagline">慢咖啡，慢生活</p>
-            <p class="hero-desc">
+            <p class="hero-desc" data-i18n="hero.desc">
               Des cafés de spécialité sourcés parmi les terroirs d'altitude du Yunnan,
               torréfiés à Paris avec soin et respect du grain.
             </p>
-            <a href="#cafes" class="btn btn--primary">Découvrir nos cafés</a>
+            <a href="#cafes" class="btn btn--primary" data-i18n="hero.cta">Découvrir nos cafés</a>
           </div>
         </div>
         <div class="hero-visual">
           <div class="hero-img-wrap">
-            <!-- Remplacez ce bloc par votre visuel :
-                 <img src="assets/hero.jpg" alt="Yunma — café du Yunnan" class="hero-img" /> -->
+            <img src="assets/hero-cherry.jpg" alt="Yunma — cerises de café du Yunnan" class="hero-img" />
           </div>
         </div>
       </div>
@@ -90,15 +111,15 @@
           <div class="pillars-inner">
             <div class="pillar">
               <span class="pillar-num">01</span>
-              <span class="pillar-text">Sourcing direct</span>
+              <span class="pillar-text" data-i18n="hero.p1">Sourcing direct</span>
             </div>
             <div class="pillar">
               <span class="pillar-num">02</span>
-              <span class="pillar-text">Torréfaction artisanale</span>
+              <span class="pillar-text" data-i18n="hero.p2">Torréfaction artisanale</span>
             </div>
             <div class="pillar">
               <span class="pillar-num">03</span>
-              <span class="pillar-text">Terroirs d'altitude</span>
+              <span class="pillar-text" data-i18n="hero.p3">Terroirs d'altitude</span>
             </div>
           </div>
         </div>
@@ -112,9 +133,9 @@
       <div class="container">
 
         <div class="section-intro">
-          <span class="label">02 — Cafés</span>
-          <h2 class="section-title">Terroirs d'exception,<br>cafés uniques.</h2>
-          <p class="section-desc">
+          <span class="label" data-i18n="cafes.label">02 — Cafés</span>
+          <h2 class="section-title" data-i18n-html="cafes.title">Terroirs d'exception,<br>cafés uniques.</h2>
+          <p class="section-desc" data-i18n="cafes.desc">
             Chaque café est le fruit d'une sélection rigoureuse, d'un dialogue sincère avec les
             producteurs et d'une torréfaction pensée pour révéler le caractère unique de chaque
             terroir yunnanais.
@@ -124,93 +145,93 @@
         <div class="cards-grid">
           <article class="card">
             <div class="card-body">
-              <span class="card-origin">Yunnan — Baoshan</span>
-              <h3 class="card-name">Arabica de montagne</h3>
-              <p class="card-notes">Notes de fleurs blanches, agrumes, miel léger</p>
+              <span class="card-origin" data-i18n="cafes.k1.origin">Yunnan — Baoshan</span>
+              <h3 class="card-name" data-i18n="cafes.k1.name">Arabica de montagne</h3>
+              <p class="card-notes" data-i18n="cafes.k1.notes">Notes de fleurs blanches, agrumes, miel léger</p>
               <ul class="card-details">
-                <li>Altitude : 1 800–2 000 m</li>
-                <li>Traitement : lavé</li>
-                <li>Variété : Catimor</li>
+                <li data-i18n="cafes.k1.d1">Altitude : 1 800–2 000 m</li>
+                <li data-i18n="cafes.k1.d2">Traitement : lavé</li>
+                <li data-i18n="cafes.k1.d3">Variété : Catimor</li>
               </ul>
             </div>
           </article>
           <article class="card">
             <div class="card-body">
-              <span class="card-origin">Yunnan — Pu'er</span>
-              <h3 class="card-name">Natural process</h3>
-              <p class="card-notes">Notes de fruits rouges, cacao, épices douces</p>
+              <span class="card-origin" data-i18n="cafes.k2.origin">Yunnan — Pu'er</span>
+              <h3 class="card-name" data-i18n="cafes.k2.name">Natural process</h3>
+              <p class="card-notes" data-i18n="cafes.k2.notes">Notes de fruits rouges, cacao, épices douces</p>
               <ul class="card-details">
-                <li>Altitude : 1 600–1 900 m</li>
-                <li>Traitement : naturel</li>
-                <li>Variété : Bourbon</li>
+                <li data-i18n="cafes.k2.d1">Altitude : 1 600–1 900 m</li>
+                <li data-i18n="cafes.k2.d2">Traitement : naturel</li>
+                <li data-i18n="cafes.k2.d3">Variété : Bourbon</li>
               </ul>
             </div>
           </article>
           <article class="card">
             <div class="card-body">
-              <span class="card-origin">Yunnan — Dehong</span>
-              <h3 class="card-name">Honey process</h3>
-              <p class="card-notes">Notes de caramel, noisette, fruits secs</p>
+              <span class="card-origin" data-i18n="cafes.k3.origin">Yunnan — Dehong</span>
+              <h3 class="card-name" data-i18n="cafes.k3.name">Honey process</h3>
+              <p class="card-notes" data-i18n="cafes.k3.notes">Notes de caramel, noisette, fruits secs</p>
               <ul class="card-details">
-                <li>Altitude : 1 700–2 100 m</li>
-                <li>Traitement : honey</li>
-                <li>Variété : Bourbon / Typica</li>
+                <li data-i18n="cafes.k3.d1">Altitude : 1 700–2 100 m</li>
+                <li data-i18n="cafes.k3.d2">Traitement : honey</li>
+                <li data-i18n="cafes.k3.d3">Variété : Bourbon / Typica</li>
               </ul>
             </div>
           </article>
         </div>
 
         <div class="faq-block">
-          <h3 class="faq-title">Questions fréquentes</h3>
+          <h3 class="faq-title" data-i18n="cafes.faq.t">Questions fréquentes</h3>
           <div class="faq-list">
 
             <div class="faq-item">
               <button class="faq-q" aria-expanded="false">
-                D'où viennent vos cafés ?
+                <span data-i18n="cafes.faq.q0">D'où viennent vos cafés ?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
               <div class="faq-a">
-                <p>Tous nos cafés proviennent du Yunnan, la province du sud-ouest de la Chine réputée pour ses terroirs d'altitude exceptionnels. Nous travaillons directement avec des producteurs locaux, sans intermédiaire, pour garantir qualité et traçabilité.</p>
+                <p data-i18n="cafes.faq.a0">Tous nos cafés proviennent du Yunnan, la province du sud-ouest de la Chine réputée pour ses terroirs d'altitude exceptionnels. Nous travaillons directement avec des producteurs locaux, sans intermédiaire, pour garantir qualité et traçabilité.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-q" aria-expanded="false">
-                Comment torréfiez-vous vos cafés ?
+                <span data-i18n="cafes.faq.q1">Comment torréfiez-vous vos cafés ?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
               <div class="faq-a">
-                <p>Nous torréfions à Paris, de façon artisanale, en petites séries. Chaque profil de torréfaction est développé pour révéler au mieux le potentiel aromatique du grain — des torréfactions claires à moyennes, respectueuses de l'origine.</p>
+                <p data-i18n="cafes.faq.a1">Nous torréfions à Paris, de façon artisanale, en petites séries. Chaque profil de torréfaction est développé pour révéler au mieux le potentiel aromatique du grain — des torréfactions claires à moyennes, respectueuses de l'origine.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-q" aria-expanded="false">
-                Comment préparer au mieux vos cafés ?
+                <span data-i18n="cafes.faq.q2">Comment préparer au mieux vos cafés ?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
               <div class="faq-a">
-                <p>Nos cafés s'expriment pleinement en méthodes douces : V60, Chemex, AeroPress ou cafetière à piston. Nos sélections à torréfaction moyenne conviennent également très bien en espresso. Nous recommandons une eau filtrée à 92–94°C.</p>
+                <p data-i18n="cafes.faq.a2">Nos cafés s'expriment pleinement en méthodes douces : V60, Chemex, AeroPress ou cafetière à piston. Nos sélections à torréfaction moyenne conviennent également très bien en espresso. Nous recommandons une eau filtrée à 92–94°C.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-q" aria-expanded="false">
-                Vos cafés sont-ils certifiés bio ou équitables ?
+                <span data-i18n="cafes.faq.q3">Vos cafés sont-ils certifiés bio ou équitables ?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
               <div class="faq-a">
-                <p>Nous privilégions une démarche de sourcing responsable et transparent plutôt que de nous appuyer uniquement sur des certifications. Nos producteurs partenaires respectent des pratiques agricoles durables et nous nous rendons sur place régulièrement pour vérifier nos engagements.</p>
+                <p data-i18n="cafes.faq.a3">Nous privilégions une démarche de sourcing responsable et transparent plutôt que de nous appuyer uniquement sur des certifications. Nos producteurs partenaires respectent des pratiques agricoles durables et nous nous rendons sur place régulièrement.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-q" aria-expanded="false">
-                Comment commander vos cafés ?
+                <span data-i18n="cafes.faq.q4">Comment commander vos cafés ?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
               <div class="faq-a">
-                <p>Contactez-nous directement par email ou WhatsApp. Nous serons ravis de vous conseiller sur les sélections disponibles et d'organiser votre commande. Livraison en France sous 3–5 jours ouvrés.</p>
+                <p data-i18n="cafes.faq.a4">Contactez-nous directement par email ou WhatsApp. Nous serons ravis de vous conseiller sur les sélections disponibles et d'organiser votre commande. Livraison en France sous 3–5 jours ouvrés.</p>
               </div>
             </div>
 
@@ -218,8 +239,8 @@
         </div>
 
         <div class="contact-box">
-          <p class="contact-box__title">Une question sur nos cafés ?</p>
-          <p class="contact-box__desc">Notre équipe est disponible pour vous conseiller et répondre à toutes vos questions.</p>
+          <p class="contact-box__title" data-i18n="cafes.box.t">Une question sur nos cafés ?</p>
+          <p class="contact-box__desc" data-i18n="cafes.box.d">Notre équipe est disponible pour vous conseiller et répondre à toutes vos questions.</p>
           <div class="contact-box__actions">
             <a href="mailto:hello@yunma.coffee" class="btn btn--light">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
@@ -247,66 +268,66 @@
       <div class="container">
 
         <div class="section-intro">
-          <span class="label">03 — Histoire</span>
-          <h2 class="section-title">Chaque tasse<br>raconte une histoire.</h2>
+          <span class="label" data-i18n="story.label">03 — Histoire</span>
+          <h2 class="section-title" data-i18n-html="story.title">Chaque tasse<br>raconte une histoire.</h2>
         </div>
 
         <div class="story-content">
           <div class="story-block">
-            <h3>L'origine du projet</h3>
-            <p>Yunma est née d'une fascination pour le Yunnan, cette province du sud-ouest de la Chine aux paysages spectaculaires et aux cultures millénaires. Lors d'un premier voyage, nous avons découvert des cafés d'une qualité surprenante, cultivés en altitude par des familles de producteurs passionnés — et largement méconnus en Europe.</p>
+            <h3 data-i18n="story.b1h">L'origine du projet</h3>
+            <p data-i18n="story.b1p">Yunma est née d'une fascination pour le Yunnan, cette province du sud-ouest de la Chine aux paysages spectaculaires et aux cultures millénaires. Lors d'un premier voyage, nous avons découvert des cafés d'une qualité surprenante, cultivés en altitude par des familles de producteurs passionnés — et largement méconnus en Europe.</p>
           </div>
           <div class="story-block">
-            <h3>Notre engagement</h3>
-            <p>Yunma (云马, « cheval des nuages ») incarne notre volonté de créer un pont direct entre les producteurs yunnanais et les amateurs de café en France. Nous sélectionnons personnellement chaque lot, nous rendons sur les terroirs, et torréfions à Paris avec le soin que mérite chaque grain.</p>
+            <h3 data-i18n="story.b2h">Notre engagement</h3>
+            <p data-i18n="story.b2p">Yunma (云马, « cheval des nuages ») incarne notre volonté de créer un pont direct entre les producteurs yunnanais et les amateurs de café en France. Nous sélectionnons personnellement chaque lot, nous rendons sur les terroirs, et torréfions à Paris avec le soin que mérite chaque grain.</p>
           </div>
           <div class="story-block">
-            <h3>Slow Coffee. Slow Life.</h3>
-            <p>Notre philosophie est simple : prendre le temps. Prendre le temps de comprendre l'origine, de maîtriser la torréfaction, et de savourer chaque tasse. Le café comme invitation à ralentir, à être présent, à apprécier l'instant.</p>
+            <h3 data-i18n="story.b3h">Slow Coffee. Slow Life.</h3>
+            <p data-i18n="story.b3p">Notre philosophie est simple : prendre le temps. Prendre le temps de comprendre l'origine, de maîtriser la torréfaction, et de savourer chaque tasse. Le café comme invitation à ralentir, à être présent, à apprécier l'instant.</p>
           </div>
         </div>
 
         <div class="faq-block">
-          <h3 class="faq-title">Questions sur notre histoire</h3>
+          <h3 class="faq-title" data-i18n="story.faq.t">Questions sur notre histoire</h3>
           <div class="faq-list">
 
             <div class="faq-item">
               <button class="faq-q" aria-expanded="false">
-                Pourquoi le Yunnan ?
+                <span data-i18n="story.faq.q0">Pourquoi le Yunnan ?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
               <div class="faq-a">
-                <p>Le Yunnan est le berceau historique du café en Chine. Ses conditions géographiques — altitude, climat tropical de montagne, sols riches — offrent un terroir idéal pour des arabica d'exception. C'est aussi une région aux cultures extraordinairement diverses, qui nous inspire profondément.</p>
+                <p data-i18n="story.faq.a0">Le Yunnan est le berceau historique du café en Chine. Ses conditions géographiques — altitude, climat tropical de montagne, sols riches — offrent un terroir idéal pour des arabica d'exception. C'est aussi une région aux cultures extraordinairement diverses, qui nous inspire profondément.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-q" aria-expanded="false">
-                Que signifie « Yunma » ?
+                <span data-i18n="story.faq.q1">Que signifie « Yunma » ?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
               <div class="faq-a">
-                <p>Yunma (云马) se compose de 云 (yún, « nuage ») et 马 (mǎ, « cheval »). Le cheval des nuages évoque à la fois les brumes matinales qui enveloppent les plantations en altitude et la liberté d'un sourcing direct, sans frontières.</p>
+                <p data-i18n="story.faq.a1">Yunma (云马) se compose de 云 (yún, « nuage ») et 马 (mǎ, « cheval »). Le cheval des nuages évoque à la fois les brumes matinales qui enveloppent les plantations en altitude et la liberté d'un sourcing direct, sans frontières.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-q" aria-expanded="false">
-                Comment choisissez-vous vos producteurs ?
+                <span data-i18n="story.faq.q2">Comment choisissez-vous vos producteurs ?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
               <div class="faq-a">
-                <p>Chaque partenariat naît d'une rencontre, d'une dégustation, d'un échange sur les pratiques et les valeurs. Nous privilégions des producteurs qui partagent notre vision d'une agriculture respectueuse. Nous visitons les exploitations et construisons des relations durables.</p>
+                <p data-i18n="story.faq.a2">Chaque partenariat naît d'une rencontre, d'une dégustation, d'un échange sur les pratiques et les valeurs. Nous privilégions des producteurs qui partagent notre vision d'une agriculture respectueuse. Nous visitons les exploitations et construisons des relations durables.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-q" aria-expanded="false">
-                Où torréfiez-vous vos cafés ?
+                <span data-i18n="story.faq.q3">Où torréfiez-vous vos cafés ?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
               <div class="faq-a">
-                <p>Nous torréfions à Paris, dans un atelier dédié où chaque lot est suivi avec attention. La proximité nous permet de réagir rapidement aux arrivages et de garantir la fraîcheur de nos cafés.</p>
+                <p data-i18n="story.faq.a3">Nous torréfions à Paris, dans un atelier dédié où chaque lot est suivi avec attention. La proximité nous permet de réagir rapidement aux arrivages et de garantir la fraîcheur de nos cafés.</p>
               </div>
             </div>
 
@@ -323,9 +344,9 @@
       <div class="container">
 
         <div class="section-intro">
-          <span class="label">04 — Professionnels</span>
-          <h2 class="section-title">Offrir le meilleur<br>à vos clients.</h2>
-          <p class="section-desc">
+          <span class="label" data-i18n="pro.label">04 — Professionnels</span>
+          <h2 class="section-title" data-i18n-html="pro.title">Offrir le meilleur<br>à vos clients.</h2>
+          <p class="section-desc" data-i18n="pro.desc">
             Vous êtes café, restaurant, hôtel, épicerie fine ou bureau ?
             Yunma vous accompagne avec des sélections exclusives, une logistique adaptée
             et un support personnalisé.
@@ -335,47 +356,47 @@
         <div class="benefits-grid">
           <div class="benefit">
             <span class="benefit-num">01</span>
-            <h3 class="benefit-title">Sélections exclusives</h3>
-            <p>Accès à des lots réservés aux professionnels, non disponibles en retail.</p>
+            <h3 class="benefit-title" data-i18n="pro.b1h">Sélections exclusives</h3>
+            <p data-i18n="pro.b1p">Accès à des lots réservés aux professionnels, non disponibles en retail.</p>
           </div>
           <div class="benefit">
             <span class="benefit-num">02</span>
-            <h3 class="benefit-title">Livraison régulière</h3>
-            <p>Approvisionnement sur mesure, en grains ou en moulu, selon votre rythme et vos besoins.</p>
+            <h3 class="benefit-title" data-i18n="pro.b2h">Livraison régulière</h3>
+            <p data-i18n="pro.b2p">Approvisionnement sur mesure, en grains ou en moulu, selon votre rythme et vos besoins.</p>
           </div>
         </div>
 
         <div class="faq-block">
-          <h3 class="faq-title">Questions fréquentes — Professionnels</h3>
+          <h3 class="faq-title" data-i18n="pro.faq.t">Questions fréquentes — Professionnels</h3>
           <div class="faq-list">
 
             <div class="faq-item">
               <button class="faq-q" aria-expanded="false">
-                Quelles sont les commandes minimales ?
+                <span data-i18n="pro.faq.q0">Quelles sont les commandes minimales ?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
               <div class="faq-a">
-                <p>Nous travaillons à partir de 5 kg par référence pour les premières commandes. Les commandes récurrentes sont adaptées à vos volumes selon votre consommation mensuelle.</p>
+                <p data-i18n="pro.faq.a0">Nous travaillons à partir de 5 kg par référence pour les premières commandes. Les commandes récurrentes sont adaptées à vos volumes selon votre consommation mensuelle.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-q" aria-expanded="false">
-                Proposez-vous des dégustations avant commande ?
+                <span data-i18n="pro.faq.q1">Proposez-vous des dégustations avant commande ?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
               <div class="faq-a">
-                <p>Oui, nous organisons des sessions de dégustation à Paris pour vous permettre de découvrir nos sélections avant de vous engager. Contactez-nous pour convenir d'un rendez-vous.</p>
+                <p data-i18n="pro.faq.a1">Oui, nous organisons des sessions de dégustation à Paris pour vous permettre de découvrir nos sélections avant de vous engager. Contactez-nous pour convenir d'un rendez-vous.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-q" aria-expanded="false">
-                Quels sont vos délais et conditions de livraison ?
+                <span data-i18n="pro.faq.q2">Quels sont vos délais et conditions de livraison ?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
               <div class="faq-a">
-                <p>Livraison sous 3 à 5 jours ouvrés en France métropolitaine. Des solutions logistiques adaptées sont disponibles pour les partenaires hors de France — contactez-nous pour en discuter.</p>
+                <p data-i18n="pro.faq.a2">Livraison sous 3 à 5 jours ouvrés en France métropolitaine. Des solutions logistiques adaptées sont disponibles pour les partenaires hors de France — contactez-nous pour en discuter.</p>
               </div>
             </div>
 
@@ -383,8 +404,8 @@
         </div>
 
         <div class="contact-box">
-          <p class="contact-box__title">Vous souhaitez travailler avec nous ?</p>
-          <p class="contact-box__desc">Contactez-nous pour découvrir nos offres professionnelles et organiser une première dégustation.</p>
+          <p class="contact-box__title" data-i18n="pro.box.t">Vous souhaitez travailler avec nous ?</p>
+          <p class="contact-box__desc" data-i18n="pro.box.d">Contactez-nous pour découvrir nos offres professionnelles et organiser une première dégustation.</p>
           <div class="contact-box__actions">
             <a href="mailto:hello@yunma.coffee" class="btn btn--light">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
@@ -412,9 +433,9 @@
       <div class="container">
 
         <div class="section-intro">
-          <span class="label">05 — Contact</span>
-          <h2 class="section-title">Parlons café.</h2>
-          <p class="section-desc">Une question, un projet, une envie de partager votre passion du café ? Nous sommes là.</p>
+          <span class="label" data-i18n="cnt.label">05 — Contact</span>
+          <h2 class="section-title" data-i18n="cnt.title">Parlons café.</h2>
+          <p class="section-desc" data-i18n="cnt.desc">Une question, un projet, une envie de partager votre passion du café ? Nous sommes là.</p>
         </div>
 
         <div class="contact-grid">
@@ -423,15 +444,15 @@
               <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/>
               <path d="M3 7L12 13L21 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
-            <h3>Email</h3>
+            <h3 data-i18n="cnt.c1h">Email</h3>
             <p>hello@yunma.coffee</p>
           </a>
           <a href="https://chat.whatsapp.com/Jr6GUVrNJliCP2gB65nFTo" class="contact-card" target="_blank" rel="noopener">
             <svg class="contact-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.977-1.412A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zM8.5 7.5c.28 0 .56.02.82.06.27.04.54.32.68.66l.9 2.2c.13.33.05.72-.22.98l-.6.6c.58 1.1 1.44 1.96 2.54 2.54l.6-.6c.26-.27.65-.35.98-.22l2.2.9c.34.14.62.41.66.68.04.26.06.54.06.82 0 1.65-1.35 3-3 3C9.82 19 5 14.18 5 8.5c0-1.65 1.35-3 3-3h.5z" fill="currentColor"/>
             </svg>
-            <h3>WhatsApp</h3>
-            <p>Disponible du lundi au vendredi, 9h–18h</p>
+            <h3 data-i18n="cnt.c2h">WhatsApp</h3>
+            <p data-i18n="cnt.c2p">Disponible du lundi au vendredi, 9h–18h</p>
           </a>
           <a href="https://www.instagram.com/yunma.coffee" class="contact-card" target="_blank" rel="noopener">
             <svg class="contact-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -439,7 +460,7 @@
               <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/>
               <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
             </svg>
-            <h3>Instagram</h3>
+            <h3 data-i18n="cnt.c3h">Instagram</h3>
             <p>@yunma.coffee</p>
           </a>
         </div>
@@ -454,14 +475,14 @@
       <div class="container">
 
         <div class="section-intro">
-          <span class="label">06 — Légal</span>
-          <h2 class="section-title">Mentions légales</h2>
+          <span class="label" data-i18n="leg.label">06 — Légal</span>
+          <h2 class="section-title" data-i18n="leg.title">Mentions légales</h2>
         </div>
 
         <div class="legal-content">
           <div class="legal-block">
-            <h3>Éditeur du site</h3>
-            <p>
+            <h3 data-i18n="leg.b1h">Éditeur du site</h3>
+            <p data-i18n-html="leg.b1p">
               Yunma<br>
               [Forme juridique] au capital de [X] €<br>
               Siège social : [Adresse], Paris, France<br>
@@ -470,32 +491,23 @@
             </p>
           </div>
           <div class="legal-block">
-            <h3>Hébergement</h3>
-            <p>
+            <h3 data-i18n="leg.b2h">Hébergement</h3>
+            <p data-i18n-html="leg.b2p">
               Ce site est hébergé par GitHub Pages, service de GitHub Inc.,<br>
               88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis.
             </p>
           </div>
           <div class="legal-block">
-            <h3>Propriété intellectuelle</h3>
-            <p>
-              L'ensemble des éléments de ce site (textes, images, logo, graphismes) est la propriété
-              exclusive de Yunma et est protégé par les lois françaises et internationales sur la
-              propriété intellectuelle. Toute reproduction, même partielle, est interdite sans autorisation préalable.
-            </p>
+            <h3 data-i18n="leg.b3h">Propriété intellectuelle</h3>
+            <p data-i18n="leg.b3p">L'ensemble des éléments de ce site (textes, images, logo, graphismes) est la propriété exclusive de Yunma et est protégé par les lois françaises et internationales sur la propriété intellectuelle. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
           </div>
           <div class="legal-block">
-            <h3>Données personnelles</h3>
-            <p>
-              Ce site ne collecte aucune donnée personnelle sans votre consentement. Les données
-              transmises via nos formulaires de contact sont utilisées uniquement pour répondre à vos
-              demandes. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et
-              de suppression de vos données. Pour exercer ces droits : hello@yunma.coffee.
-            </p>
+            <h3 data-i18n="leg.b4h">Données personnelles</h3>
+            <p data-i18n="leg.b4p">Ce site ne collecte aucune donnée personnelle sans votre consentement. Les données transmises via nos formulaires de contact sont utilisées uniquement pour répondre à vos demandes. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ces droits : hello@yunma.coffee.</p>
           </div>
           <div class="legal-block">
-            <h3>Cookies</h3>
-            <p>Ce site n'utilise pas de cookies de tracking ou publicitaires.</p>
+            <h3 data-i18n="leg.b5h">Cookies</h3>
+            <p data-i18n="leg.b5p">Ce site n'utilise pas de cookies de tracking ou publicitaires.</p>
           </div>
         </div>
 
@@ -510,7 +522,7 @@
       <a href="#accueil" class="footer-logo" aria-label="Yunma — retour en haut">
         <img src="assets/logo.png" alt="Yunma" class="footer-logo-img" />
       </a>
-      <p class="footer-tagline">Slow Coffee. Slow Life. — 慢咖啡，慢生活</p>
+      <p class="footer-tagline" data-i18n="foot.tag">Slow Coffee. Slow Life. — 慢咖啡，慢生活</p>
       <a href="https://www.instagram.com/yunma.coffee" target="_blank" rel="noopener noreferrer" class="footer-instagram">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
           <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
@@ -519,10 +531,7 @@
         </svg>
         <span>@yunma.coffee</span>
       </a>
-      <p class="footer-copy">
-        © 2025 Yunma — Tous droits réservés ·
-        <a href="#legal">Mentions légales</a>
-      </p>
+      <p class="footer-copy" data-i18n-html="foot.copy">© 2025 Yunma — Tous droits réservés · <a href="#legal">Mentions légales</a></p>
     </div>
   </footer>
 

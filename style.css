@@ -67,7 +67,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   z-index: 100;
   height: var(--header-h);
   background-color: var(--vanilla);
-  border-bottom: 1px solid rgba(30, 30, 30, 0.07);
   transition: box-shadow var(--dur) var(--ease);
 }
 
@@ -218,10 +217,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .nav-link {
   display: block;
-  padding: 18px 0;
-  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  padding: 13px 0;
+  font-size: clamp(1.25rem, 4vw, 1.625rem);
   font-weight: 300;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
   color: var(--anthracite);
   transition: padding-left var(--dur) var(--ease), opacity 0.2s;
 }
@@ -942,4 +941,87 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .section { padding-top: calc(var(--header-h) + 96px); padding-bottom: 120px; }
   .section-intro { margin-bottom: 80px; }
   .story-content { gap: 72px; }
+}
+
+/* ══════════════════════════════════════
+   LANGUAGE SWITCHER
+══════════════════════════════════════ */
+.lang-switcher {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .lang-switcher { left: 48px; }
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--anthracite);
+  opacity: 0.45;
+  padding: 6px 0;
+  transition: opacity 0.2s;
+}
+
+.lang-btn:hover { opacity: 0.9; }
+
+.lang-btn svg {
+  flex-shrink: 0;
+  transition: transform var(--dur) var(--ease);
+}
+
+.lang-btn[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background: var(--vanilla);
+  border: 1px solid rgba(30, 30, 30, 0.1);
+  border-radius: 3px;
+  min-width: 128px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.2s var(--ease), transform 0.2s var(--ease);
+  box-shadow: 0 8px 32px rgba(30, 30, 30, 0.1);
+}
+
+.lang-dropdown.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.lang-opt {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 0.7875rem;
+  font-weight: 400;
+  text-align: left;
+  transition: background-color 0.15s;
+  color: var(--anthracite);
+  opacity: 0.6;
+}
+
+.lang-opt:hover {
+  background-color: var(--greige);
+  opacity: 1;
+}
+
+.lang-opt.is-active {
+  font-weight: 600;
+  opacity: 1;
 }
