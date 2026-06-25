@@ -16,7 +16,7 @@
   --font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   --container: 1160px;
-  --header-h:  72px;
+  --header-h:  84px;
 
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --dur:  0.28s;
@@ -92,13 +92,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .logo-link { display: flex; align-items: center; }
 
 .logo-img {
-  height: 44px;
+  height: 66px;
   width: auto;
   display: block;
 }
 
 @media (min-width: 768px) {
-  .logo-img { height: 52px; }
+  .logo-img { height: 78px; }
 }
 
 /* ══════════════════════════════════════
@@ -315,7 +315,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .hero-content-col {
-  padding: calc(var(--header-h) + 48px) 24px 40px;
+  padding: calc(var(--header-h) + 24px) 24px 40px;
 }
 
 .hero-content {
@@ -353,7 +353,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero-content-col {
     flex: 1;
     min-width: 0;
-    padding: calc(var(--header-h) + 72px) 56px 72px 60px;
+    padding: calc(var(--header-h) + 36px) 56px 72px 60px;
   }
 
   .hero-visual {
@@ -677,6 +677,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: flex;
   flex-direction: column;
   gap: 14px;
+  margin-bottom: 80px;
 }
 
 @media (min-width: 768px) {
