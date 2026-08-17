@@ -315,7 +315,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .hero-content-col {
-  padding: calc(var(--header-h) / 2) 24px 40px;
+  padding: calc(var(--header-h) + 16px) 24px 40px;
 }
 
 .hero-content {
@@ -325,12 +325,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* Full-width square on mobile */
 .hero-visual {
   width: 100%;
-  flex-shrink: 0;
+  flex: 1;
+  min-height: 0;
 }
 
 .hero-img-wrap {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
   background-color: var(--greige);
   overflow: hidden;
   position: relative;
@@ -367,6 +368,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
   .hero-img-wrap {
     width: 100%;
+    height: auto;
     aspect-ratio: 1 / 1;
   }
 }
@@ -934,6 +936,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 ══════════════════════════════════════ */
 @media (max-width: 480px) {
   .section { padding-top: calc(var(--header-h) + 48px); padding-bottom: 72px; }
+  .section--hero { padding-top: 0; padding-bottom: 0; }
   .contact-box { padding: 32px 24px; }
   .pillar { padding-left: 16px; }
   .pillar-text { font-size: 0.6875rem; }
