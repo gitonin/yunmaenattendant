@@ -942,6 +942,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 @media (min-width: 1024px) {
   .section { padding-top: calc(var(--header-h) + 96px); padding-bottom: 120px; }
+  .section--hero { padding-top: 0; padding-bottom: 0; }
   .section-intro { margin-bottom: 80px; }
   .story-content { gap: 72px; }
 }
